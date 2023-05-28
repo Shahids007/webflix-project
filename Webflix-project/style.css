@@ -1,0 +1,253 @@
+body{
+    background-color: rgb(10, 10, 69);
+    background: linear-gradient(151.6deg, #E40913 -46.64%, #181049 48.45%);
+}
+#header{
+    background-image: linear-gradient(rgba(7, 1, 17, 0.7),rgba(7, 1, 17, 0.7)), url(./img/netflix.jpg);
+    /* display: flex; */
+    /* width: 100%;
+    height: 100%; */
+    height: 725px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.nav-sign{
+    display: flex;
+    margin-top: 15px;
+}
+#language{
+    width: 150px;
+    height: 35px;
+    margin-right: 35px;
+}
+.sign-in{
+    width: 150px;
+    height: 35px;
+    background-color: red;
+}
+.nav-sign button:hover{
+    background-color: rgb(7, 137, 7);
+    color: aliceblue;
+}
+.content{
+    padding-left: 120px;
+    margin-top: 60px;
+}
+.content>h1{
+    color: aliceblue;
+    font-size: 60px;
+    /* line-height: 70px; */
+    font-weight: 700px;
+    max-width: 800px;
+    /* padding-left: 120px; */
+}
+.content>p{
+    color: aliceblue;
+    font-size: 29px;
+    /* padding-left: 120px; */
+}
+.content>form>.input{
+    height: 50px;
+    width: 500px;
+}
+.content>form>.start{
+    height: 52px;
+    width: 200px;
+    background-color: red;
+}
+.content button:hover{
+    background-color: teal;
+    color:red;
+}
+/* .container{
+    display: flex;
+} */
+.box{
+    display: flex;
+    /* width: 200px; */
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 6%;
+    /* border: 1px solid red; */
+    /* justify-content: space-evenly; */
+}
+.para{
+    padding-top: 83px;
+    /* padding-right: 100px; */
+    color: aliceblue;
+    /* border: 1px solid green; */
+    /* background: linear-gradient(151.6deg, #E40913 -46.64%, #181049 48.45%); */
+    text-align: center;
+}
+/* frequently asked questions */
+
+.faq{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+    color: aliceblue;
+}
+.faq h2 {
+    font-weight: 500;
+    font-size: 40px;
+}
+.plus{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.plus li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.plus li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #2c0f5e;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.plus .init{
+    background: #2c0f5e;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.plus input[type="radio"]:checked + label + .init{
+    min-height: 200px;
+    padding: 30px 20px;
+
+}
+.plus input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .email-signup{
+    max-width: 400px;
+    margin: 15px auto 60px;
+} 
+.faq small{
+    font-size:13px ;
+}
+ .faq form button:hover{
+    background-color: green;
+}
+/* footer */
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #1d0456;
+    color: #9a9494;
+    /* display: flex; */
+    background: linear-gradient(151.6deg, #E40913 -46.64%, #181049 48.45%);
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color:#9a9494;
+    font-size: 14px;
+    margin-bottom: 10px;
+} 
+.footer .col a:hover{
+    background-color: #2c0f5e;
+    width: fit-content;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+    display: flex;
+}
+.footer .language-btn{
+    color:#fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+.copyright-txt{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/*-------------------------------media queries for small screen----------*/
+
+@media only screen and (max-width: 600px){
+    .logo{
+        width: 100px;
+    }
+    nav button{
+        padding: 5px 10px;
+    }
+    nav .language-btn{
+        padding: 4px 8px;
+    }
+    .header-content{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+    .header-content h1{
+        font-size: 30px;
+    }
+    .email-signup button{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .text-col, .img-col{
+        flex-basis: 100%;
+    }
+    .features h2{
+        font-size: 30px;
+    }
+    .features p{
+        font-size: 15px;
+    }
+    .row:nth-child(3), .row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .features .row{
+        padding: 10px 0;
+    }
+    .faq h2{
+        font-size: 20px;
+    }
+    .accordion .content{
+        font-size: 14px;
+    }
+    .accordion li label{
+       padding: 10px;
+       font-size: 14px; 
+    }
+    label::after{
+        font-size:22px ;
+        }
